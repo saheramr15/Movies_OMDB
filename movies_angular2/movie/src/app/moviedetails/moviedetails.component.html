@@ -1,0 +1,30 @@
+<section class="card-container">
+    <div class="card-main" >
+        <div class="card-img">
+            <img src="{{movie.poster}}" alt="">
+        </div>
+        <div class="card-content">
+            <h3 class="card-title">{{movie.title}}</h3>
+            <div class="card-description">
+               <span>Director:</span> {{movie.director}} <br>
+               <span>Genre:</span>  {{movie.genre}} <br>
+                <span>Released:</span> {{movie.released}} <br>
+               <span>Actors:</span>   {{movie.actors}} <br>
+               <span>Plot:</span> {{movie.plot}}
+                
+            </div>
+             
+            
+            
+            <div class="card-date">
+                 
+                <button class="fav"    *ngIf="addbutt !== ''"  (click)="addToFavorites()" >   {{addbutt}}   </button>
+                <button class="fav rem" *ngIf="addbutt === ''"    (click)="removeFavorites()"  > {{rembutt}} </button>
+
+                <p class="date"> Duration: {{movie.runtime}}</p>
+            </div>
+            <span id="added">{{addedSuccess}}</span>
+            <span  id="addto_err" > {{addto_message}}  </span>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,19 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<ul id="nav">
+    <li id="omdb">OMDB-TV</li>
+    <div class="comp">
+      <li><a href="/home">Home</a></li>
+      <li><a href="/movielist">Movies List</a></li>
+      <li *ngIf="!userLoggedIn"><a href="/signup">SignUp</a></li>
+      <!-- <li *ngIf="userLoggedIn"><a href="#">Favourties</a></li> -->
+      <li *ngIf="userLoggedIn">
+          <a  href="#" (click)="logout()" > 
+            <span class="material-symbols-outlined">
+            logout
+          </span> 
+        </a>
+      </li>
+
+    </div>
+  </ul>
+  
