@@ -1,0 +1,1 @@
+This project is a web application built using Spring Boot and Angular that interacts with the OMDB API to fetch and display movie information. The application allows users to search for movies, view details, and save favorite movies
